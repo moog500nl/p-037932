@@ -142,7 +142,7 @@ const DetailsSection = () => {
                 Contact us
               </div>
               <h2 className="text-2xl sm:text-3xl font-display text-white font-bold mt-auto">
-                Request a demo
+                Let's talk
               </h2>
             </div>
             
