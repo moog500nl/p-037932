@@ -2,10 +2,12 @@
 import React, { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
 import { Menu, X } from "lucide-react";
+import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -22,16 +24,26 @@ const Navbar = () => {
     document.body.style.overflow = !isMenuOpen ? 'hidden' : '';
   };
 
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
-    
-    // Close mobile menu if open
+  const closeMenu = () => {
     if (isMenuOpen) {
       setIsMenuOpen(false);
       document.body.style.overflow = '';
+    }
+  };
+
+  const isHomePage = location.pathname === '/';
+
+  const scrollToSection = (sectionId) => {
+    closeMenu();
+    
+    if (!isHomePage) {
+      // If not on home page, navigate to home and then scroll
+      return;
+    }
+    
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
@@ -45,13 +57,9 @@ const Navbar = () => {
       )}
     >
       <div className="container flex items-center justify-between px-4 sm:px-6 lg:px-8">
-        <a 
-          href="#" 
+        <Link 
+          to="/"
           className="flex items-center space-x-2"
-          onClick={(e) => {
-            e.preventDefault();
-            scrollToTop();
-          }}
           aria-label="Pulse Robot"
         >
           <img 
@@ -59,23 +67,46 @@ const Navbar = () => {
             alt="Pulse Robot Logo" 
             className="h-7 sm:h-8" 
           />
-        </a>
+        </Link>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex space-x-8">
-          <a 
-            href="#" 
+          <Link 
+            to="/" 
             className="nav-link"
-            onClick={(e) => {
-              e.preventDefault();
-              scrollToTop();
-            }}
           >
             Home
-          </a>
-          <a href="#features" className="nav-link">About</a>
-          <a href="#details" className="nav-link">Contact</a>
-          <a href="/blog" className="nav-link">Blog</a>
+          </Link>
+          {isHomePage ? (
+            <>
+              <a 
+                href="#features" 
+                className="nav-link" 
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollToSection('features');
+                }}
+              >
+                About
+              </a>
+              <a 
+                href="#details" 
+                className="nav-link"
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollToSection('details');
+                }}
+              >
+                Contact
+              </a>
+            </>
+          ) : (
+            <>
+              <Link to="/#features" className="nav-link">About</Link>
+              <Link to="/#details" className="nav-link">Contact</Link>
+            </>
+          )}
+          <Link to="/blog" className="nav-link">Blog</Link>
         </nav>
 
         {/* Mobile menu button - increased touch target */}
@@ -94,48 +125,61 @@ const Navbar = () => {
         isMenuOpen ? "opacity-100 translate-x-0" : "opacity-0 translate-x-full pointer-events-none"
       )}>
         <nav className="flex flex-col space-y-8 items-center mt-8">
-          <a 
-            href="#" 
+          <Link 
+            to="/"
             className="text-xl font-medium py-3 px-6 w-full text-center rounded-lg hover:bg-gray-100" 
-            onClick={(e) => {
-              e.preventDefault();
-              scrollToTop();
-              setIsMenuOpen(false);
-              document.body.style.overflow = '';
-            }}
+            onClick={closeMenu}
           >
             Home
-          </a>
-          <a 
-            href="#features" 
+          </Link>
+          {isHomePage ? (
+            <>
+              <a 
+                href="#features" 
+                className="text-xl font-medium py-3 px-6 w-full text-center rounded-lg hover:bg-gray-100" 
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollToSection('features');
+                }}
+              >
+                About
+              </a>
+              <a 
+                href="#details" 
+                className="text-xl font-medium py-3 px-6 w-full text-center rounded-lg hover:bg-gray-100" 
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollToSection('details');
+                }}
+              >
+                Contact
+              </a>
+            </>
+          ) : (
+            <>
+              <Link 
+                to="/#features" 
+                className="text-xl font-medium py-3 px-6 w-full text-center rounded-lg hover:bg-gray-100" 
+                onClick={closeMenu}
+              >
+                About
+              </Link>
+              <Link 
+                to="/#details" 
+                className="text-xl font-medium py-3 px-6 w-full text-center rounded-lg hover:bg-gray-100" 
+                onClick={closeMenu}
+              >
+                Contact
+              </a>
+            </>
+          )}
+          <Link 
+            to="/blog" 
             className="text-xl font-medium py-3 px-6 w-full text-center rounded-lg hover:bg-gray-100" 
-            onClick={() => {
-              setIsMenuOpen(false);
-              document.body.style.overflow = '';
-            }}
-          >
-            About
-          </a>
-          <a 
-            href="#details" 
-            className="text-xl font-medium py-3 px-6 w-full text-center rounded-lg hover:bg-gray-100" 
-            onClick={() => {
-              setIsMenuOpen(false);
-              document.body.style.overflow = '';
-            }}
-          >
-            Contact
-          </a>
-          <a 
-            href="/blog" 
-            className="text-xl font-medium py-3 px-6 w-full text-center rounded-lg hover:bg-gray-100" 
-            onClick={() => {
-              setIsMenuOpen(false);
-              document.body.style.overflow = '';
-            }}
+            onClick={closeMenu}
           >
             Blog
-          </a>
+          </Link>
         </nav>
       </div>
     </header>
