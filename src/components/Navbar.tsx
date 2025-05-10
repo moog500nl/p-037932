@@ -60,12 +60,12 @@ const Navbar = () => {
         <Link 
           to="/"
           className="flex items-center space-x-2"
-          aria-label="Pulse Robot"
+          aria-label="Brandweave"
         >
           <img 
-            src="/logo.svg" 
-            alt="Pulse Robot Logo" 
-            className="h-7 sm:h-8" 
+            src="/lovable-uploads/50e85708-1147-4423-ac40-ca8500df82a5.png" 
+            alt="Brandweave Logo" 
+            className="h-8 sm:h-10" 
           />
         </Link>
 
