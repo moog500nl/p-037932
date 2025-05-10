@@ -65,7 +65,7 @@ const Navbar = () => {
           <img 
             src="/lovable-uploads/50e85708-1147-4423-ac40-ca8500df82a5.png" 
             alt="Brandweave Logo" 
-            className="h-8 sm:h-10" 
+            className="h-10 sm:h-12" 
           />
         </Link>
 
