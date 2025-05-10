@@ -75,6 +75,7 @@ const Navbar = () => {
           </a>
           <a href="#features" className="nav-link">About</a>
           <a href="#details" className="nav-link">Contact</a>
+          <a href="/blog" className="nav-link">Blog</a>
         </nav>
 
         {/* Mobile menu button - increased touch target */}
@@ -124,6 +125,16 @@ const Navbar = () => {
             }}
           >
             Contact
+          </a>
+          <a 
+            href="/blog" 
+            className="text-xl font-medium py-3 px-6 w-full text-center rounded-lg hover:bg-gray-100" 
+            onClick={() => {
+              setIsMenuOpen(false);
+              document.body.style.overflow = '';
+            }}
+          >
+            Blog
           </a>
         </nav>
       </div>
