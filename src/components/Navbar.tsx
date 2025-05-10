@@ -170,7 +170,7 @@ const Navbar = () => {
                 onClick={closeMenu}
               >
                 Contact
-              </a>
+              </Link>
             </>
           )}
           <Link 
