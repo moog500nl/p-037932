@@ -70,7 +70,6 @@ const Index = () => {
         <Features />
         <Testimonials />
         <Newsletter />
-        <MadeByHumans />
       </main>
       <Footer />
     </div>
