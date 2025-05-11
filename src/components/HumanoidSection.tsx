@@ -96,12 +96,12 @@ const HumanoidSection = () => {
                 animationDelay: "0.1s"
               }}>
                 <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-pulse-500 text-white mr-2">02</span>
-                <span>Humanoid</span>
+                <span>Brandweave</span>
               </div>
             </div>
             
             <h2 className="section-title text-3xl sm:text-4xl md:text-5xl font-display font-bold mb-1 md:mb-2">
-              Why Humanoid
+              Why Brandweave
             </h2>
           </div>
           
