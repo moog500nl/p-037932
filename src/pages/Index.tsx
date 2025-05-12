@@ -71,20 +71,6 @@ const Index = () => {
         <Testimonials />
         <Newsletter />
       </main>
-      <section className="w-full bg-white py-12">
-        <div className="container px-4 mx-auto max-w-2xl">
-          <div className="bg-white p-4 sm:p-8 rounded-2xl shadow-elegant">
-            <iframe 
-              data-tally-src="https://tally.so/embed/3xogVJ?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" 
-              loading="lazy" 
-              width="100%" 
-              height="400" 
-              title="Contact form"
-              style={{ border: "none" }}
-            ></iframe>
-          </div>
-        </div>
-      </section>
       <Footer />
     </div>
   );
