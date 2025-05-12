@@ -110,7 +110,7 @@ const Features = () => {
             index={0}
           />
           <FeatureCard
-            icon={<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5 sm:w-6 sm:h-6"><path d="M12 3c5.5 0 10 4.5 10 10s-4.5 10-10 10S2 18.5 2 13 6.5 3 12 3"></path><path d="M12 12 7.5 7.5"></path><path d="M12 12 7.5 16.5"></path><path d="M12 12 16.5 7.5"></path><path d="M12 12 16.5 16.5"></path><circle cx="12" cy="12" r="1"></circle></svg>}
+            icon={<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5 sm:w-6 sm:h-6"><path d="M21 9v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9m18 0a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2m18 0-9 3-9-3"/><path d="m3 9 9 3 9-3"/><path d="M12 12v9"/><path d="M12 12 3 9"/><path d="m12 12 9-3"/></svg>}
             title="Brand Coverage"
             description="Discover if your brand is being mentioned by AI deep research agents."
             index={1}
