@@ -17,7 +17,7 @@ const ImageShowcaseSection = () => {
         <div className="rounded-2xl sm:rounded-3xl overflow-hidden shadow-elegant mx-auto max-w-4xl animate-on-scroll">
           <div className="w-full bg-black">
             <img 
-              src="/lovable-uploads/50e85708-1147-4423-ac40-ca8500df82a5.png" 
+              src="/attached_assets/logos.png" 
               alt="Major AI companies logos including OpenAI, Google, Perplexity, and Grok" 
               className="w-full h-auto object-contain"
             />
