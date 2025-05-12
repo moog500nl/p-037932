@@ -19,7 +19,7 @@ const ImageShowcaseSection = () => {
             <img 
               src="/attached_assets/logos.png" 
               alt="Major AI companies logos including OpenAI, Google, Perplexity, and Grok" 
-              className="w-full h-auto object-contain"
+              className="w-full h-auto object-contain max-w-full"
             />
           </div>
           <div className="bg-white p-4 sm:p-8">
