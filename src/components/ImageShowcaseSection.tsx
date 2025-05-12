@@ -23,7 +23,7 @@ const ImageShowcaseSection = () => {
             />
           </div>
           <div className="bg-white p-4 sm:p-8">
-            <h3 className="text-xl sm:text-2xl font-display font-semibold mb-3 sm:mb-4">Next Generation AI</h3>
+            <h3 className="text-xl sm:text-2xl font-display font-semibold mb-3 sm:mb-4">Advanced AI Brand Analysis</h3>
             <p className="text-gray-700 text-sm sm:text-base">
               Leading companies in artificial intelligence are revolutionizing how we interact 
               with technology, pushing the boundaries of what's possible in natural language 
