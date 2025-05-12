@@ -95,7 +95,7 @@ const Features = () => {
             <span>Features</span>
           </div>
           <h2 className="section-title mb-3 sm:mb-4 opacity-0 fade-in-element">
-            Advanced Intelligence, <br className="hidden sm:block" />Human-Like Intuition
+            Bespoke AI Research, <br className="hidden sm:block" />Human-Crafted Insight
           </h2>
           <p className="section-subtitle mx-auto opacity-0 fade-in-element">
             Built with cutting-edge technology to understand, learn, and adapt to your unique needs.
