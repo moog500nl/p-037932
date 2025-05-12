@@ -50,7 +50,7 @@ const DetailsSection = () => {
                 Contact us
               </div>
               <h2 className="text-2xl sm:text-3xl font-display text-white font-bold mt-auto">
-                Let's talk
+                Uncover Your AI Brand Perception
               </h2>
             </div>
 
