@@ -118,25 +118,25 @@ const Features = () => {
           <FeatureCard
             icon={<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5 sm:w-6 sm:h-6"><rect width="18" height="11" x="3" y="11" rx="2"></rect><circle cx="12" cy="5" r="2"></circle><path d="M12 7v4"></path><line x1="8" x2="8" y1="16" y2="16"></line><line x1="16" x2="16" y1="16" y2="16"></line></svg>}
             title="Sentiment Analysis"
-            description="Deep evaluation of emotional tone and context in AI discussions about your brand, providing insights into perception."
+            description="Discover if your brand is being discussed in a favourable, negative or neutral manner by AI deep research agents."
             index={2}
           />
           <FeatureCard
             icon={<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5 sm:w-6 sm:h-6"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="7.5 4.21 12 6.81 16.5 4.21"></polyline><polyline points="7.5 19.79 7.5 14.6 3 12"></polyline><polyline points="21 12 16.5 14.6 16.5 19.79"></polyline><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" x2="12" y1="22.08" y2="12"></line></svg>}
             title="Citation Analysis"
-            description="Track and analyze how AI models reference and cite your brand's content, products, and services in their responses."
+            description="Discover which online sources deep research agents are relying on to research your brand."
             index={3}
           />
           <FeatureCard
             icon={<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5 sm:w-6 sm:h-6"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"></path><path d="m14.5 9-5 5"></path><path d="m9.5 9 5 5"></path></svg>}
             title="Deep Research Agent Thoughts Analysis"
-            description="Insight into AI reasoning patterns and decision processes when evaluating and recommending your brand."
+            description="Discover which online sources deep research agents are relying on to research your brand."
             index={4}
           />
           <FeatureCard
             icon={<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5 sm:w-6 sm:h-6"><path d="M16 6H3v11a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V9a1 1 0 0 0-1-1h-2"></path><path d="M8 6V4a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v2"></path><line x1="12" x2="12" y1="11" y2="15"></line><line x1="10" x2="14" y1="13" y2="13"></line></svg>}
             title="GEO & SEO Recommendations"
-            description="Location-specific insights and search optimization strategies based on AI-driven market analysis."
+            description="Receive recommendations designed to strategically enhance how your brand is discovered, understood, and recommended by advanced AI agents and traditional search engines alike."
             index={5}
           />
         </div>
