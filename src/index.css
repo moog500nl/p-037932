@@ -1,4 +1,7 @@
+The code adds CSS animation styles for rotating words (Brand, Service, Product) with fade transitions.
+```
 
+```replit_final_file
 @font-face {
   font-family: 'Avenir';
   src: local('Avenir');
@@ -135,7 +138,7 @@
   .pulse-chip {
     @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-pulse-100 text-pulse-600 border border-pulse-200;
   }
-  
+
   .section-container {
     @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12;
   }
@@ -155,7 +158,7 @@
   .feature-card {
     @apply p-6 rounded-2xl transition-all duration-500 hover:translate-y-[-5px];
   }
-  
+
   .button-primary {
     @apply bg-pulse-500 hover:bg-pulse-600 text-white font-medium py-3 px-6 rounded-full transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-[1.02] active:scale-[0.98];
   }
@@ -163,7 +166,7 @@
   .button-secondary {
     @apply bg-transparent border border-gray-300 hover:border-pulse-500 text-gray-800 hover:text-pulse-500 font-medium py-3 px-6 rounded-full transition-all duration-300;
   }
-  
+
   .nav-link {
     @apply relative text-gray-800 hover:text-pulse-500 py-2 transition-colors duration-300 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-pulse-500 after:transition-all hover:after:w-full;
   }
@@ -214,4 +217,42 @@
 .parallax {
   transform: translateY(var(--parallax-y, 0));
   transition: transform 0.1s ease-out;
+}
+
+/* Add any global styles here */
+
+.word-rotate {
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  min-width: 150px;
+}
+
+.word-rotate::after {
+  content: "Brand";
+  animation: wordRotate 9s cubic-bezier(0.68, -0.55, 0.265, 1.55) infinite;
+}
+
+@keyframes wordRotate {
+  0%, 33% {
+    content: "Brand";
+    opacity: 1;
+  }
+  34%, 35% {
+    opacity: 0;
+  }
+  36%, 66% {
+    content: "Service";
+    opacity: 1;
+  }
+  67%, 68% {
+    opacity: 0;
+  }
+  69%, 99% {
+    content: "Product";
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }

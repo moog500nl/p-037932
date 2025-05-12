@@ -114,7 +114,7 @@ const Hero = () => {
               className="section-title text-3xl sm:text-4xl lg:text-5xl xl:text-6xl leading-tight opacity-0 animate-fade-in" 
               style={{ animationDelay: "0.3s" }}
             >
-              AI Brand Perception,<br className="hidden sm:inline" />Clearly Understood
+              AI <span className="word-rotate">Brand</span> Perception,<br className="hidden sm:inline" />Clearly Understood
             </h1>
 
 
