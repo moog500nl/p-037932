@@ -98,7 +98,7 @@ const Features = () => {
             Bespoke AI Research, <br className="hidden sm:block" />Human-Crafted Insight
           </h2>
           <p className="section-subtitle mx-auto opacity-0 fade-in-element">
-            Built with cutting-edge technology to understand, learn, and adapt to your unique needs.
+            Utilising advanced AI to deliver tailored investigations and intuitive understanding, adapting specifically to your brand's unique questions
           </p>
         </div>
         
