@@ -74,6 +74,7 @@ const Navbar = () => {
           <Link 
             to="/" 
             className="nav-link"
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           >
             Home
           </Link>
