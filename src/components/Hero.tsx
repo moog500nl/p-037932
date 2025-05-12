@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef, useState } from "react";
 import { cn } from "@/lib/utils";
 import { ArrowRight } from "lucide-react";
@@ -15,10 +14,10 @@ const Hero = () => {
     const checkMobile = () => {
       setIsMobile(window.innerWidth < 768);
     };
-    
+
     checkMobile();
     window.addEventListener('resize', checkMobile);
-    
+
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
@@ -32,10 +31,10 @@ const Hero = () => {
   useEffect(() => {
     // Skip effect on mobile
     if (isMobile) return;
-    
+
     const handleMouseMove = (e: MouseEvent) => {
       if (!containerRef.current || !imageRef.current) return;
-      
+
       const {
         left,
         top,
@@ -47,18 +46,18 @@ const Hero = () => {
 
       imageRef.current.style.transform = `perspective(1000px) rotateY(${x * 2.5}deg) rotateX(${-y * 2.5}deg) scale3d(1.02, 1.02, 1.02)`;
     };
-    
+
     const handleMouseLeave = () => {
       if (!imageRef.current) return;
       imageRef.current.style.transform = `perspective(1000px) rotateY(0deg) rotateX(0deg) scale3d(1, 1, 1)`;
     };
-    
+
     const container = containerRef.current;
     if (container) {
       container.addEventListener("mousemove", handleMouseMove);
       container.addEventListener("mouseleave", handleMouseLeave);
     }
-    
+
     return () => {
       if (container) {
         container.removeEventListener("mousemove", handleMouseMove);
@@ -66,11 +65,11 @@ const Hero = () => {
       }
     };
   }, [isMobile]);
-  
+
   useEffect(() => {
     // Skip parallax on mobile
     if (isMobile) return;
-    
+
     const handleScroll = () => {
       const scrollY = window.scrollY;
       const elements = document.querySelectorAll('.parallax');
@@ -81,11 +80,11 @@ const Hero = () => {
         element.style.setProperty('--parallax-y', `${yPos}px`);
       });
     };
-    
+
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, [isMobile]);
-  
+
   return (
     <section 
       className="overflow-hidden relative bg-cover" 
@@ -95,9 +94,11 @@ const Hero = () => {
         backgroundPosition: 'center 30%', 
         padding: isMobile ? '100px 12px 40px' : '120px 20px 60px'
       }}
+      aria-label="hero section"
     >
+      <link rel="preload" as="image" href="/Header-background.webp" />
       <div className="absolute -top-[10%] -right-[5%] w-1/2 h-[70%] bg-pulse-gradient opacity-20 blur-3xl rounded-full"></div>
-      
+
       <div className="container px-4 sm:px-6 lg:px-8" ref={containerRef}>
         <div className="flex flex-col lg:flex-row gap-6 lg:gap-12 items-center">
           <div className="w-full lg:w-1/2">
@@ -108,17 +109,17 @@ const Hero = () => {
               <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-pulse-500 text-white mr-2">01</span>
               <span>Purpose</span>
             </div>
-            
+
             <h1 
               className="section-title text-3xl sm:text-4xl lg:text-5xl xl:text-6xl leading-tight opacity-0 animate-fade-in" 
               style={{ animationDelay: "0.3s" }}
             >
               AI Brand Perception,<br className="hidden sm:inline" />Clearly Understood
             </h1>
-            
-            
+
+
           </div>
-          
+
           <div className="w-full lg:w-1/2 relative mt-6 lg:mt-0">
             {lottieData ? (
               <div className="relative z-10 animate-fade-in" style={{ animationDelay: "0.9s" }}>
@@ -140,14 +141,14 @@ const Hero = () => {
                   className="w-full h-auto object-cover transition-transform duration-500 ease-out" 
                   style={{ transformStyle: 'preserve-3d' }} 
                 />
-                
+
               </div>
               </>
             )}
           </div>
         </div>
       </div>
-      
+
       <div className="hidden lg:block absolute bottom-0 left-1/4 w-64 h-64 bg-pulse-100/30 rounded-full blur-3xl -z-10 parallax" data-speed="0.05"></div>
     </section>
   );
