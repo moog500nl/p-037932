@@ -7,10 +7,10 @@ const ImageShowcaseSection = () => {
       <div className="container px-4 sm:px-6 lg:px-8 mx-auto">
         <div className="max-w-3xl mx-auto text-center mb-8 sm:mb-12 animate-on-scroll">
           <h2 className="text-3xl sm:text-4xl font-display font-bold tracking-tight text-gray-900 mb-3 sm:mb-4">
-            Leading AI Companies
+            Deep AI Insights
           </h2>
           <p className="text-base sm:text-lg text-gray-600">
-            Major technology companies shaping the future of artificial intelligence.
+            Understand precisely how AI agents rank and describe you, then optimise for category leadership.
           </p>
         </div>
         
