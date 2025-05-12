@@ -15,11 +15,15 @@ const ImageShowcaseSection = () => {
         </div>
         
         <div className="rounded-2xl sm:rounded-3xl overflow-hidden shadow-elegant mx-auto max-w-4xl animate-on-scroll">
-          <div className="w-full bg-black">
+          <div className="w-full bg-black p-4">
             <img 
               src="/attached_assets/logos.png" 
               alt="Major AI companies logos including OpenAI, Google, Perplexity, and Grok" 
-              className="w-full h-auto object-contain max-w-full"
+              className="w-full h-auto object-contain max-w-full mx-auto"
+              onError={(e) => {
+                console.error('Image failed to load:', e);
+                e.currentTarget.style.display = 'none';
+              }}
             />
           </div>
           <div className="bg-white p-4 sm:p-8">
