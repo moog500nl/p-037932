@@ -104,7 +104,7 @@ const Features = () => {
         
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
           <FeatureCard
-            icon={<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5 sm:w-6 sm:h-6"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5h3.5L9.5 2h5l1.5 2h3.5a2.5 2.5 0 0 1 0 5H18"></path><path d="M6 9v11a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V9"></path><path d="M12 12h.01"></path><path d="M12 16h.01"></path></svg>}
+            icon={<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5 sm:w-6 sm:h-6"><path d="M6 9V2h12v7"></path><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h2"></path><path d="M18 18h2a2 2 0 0 0 2-2v-5a2 2 0 0 0-2-2h-2"></path><path d="M12 19c-2.5 0-2.5-3-5-3"></path><path d="M12 19c2.5 0 2.5-3 5-3"></path></svg>}
             title="Adaptive Learning"
             description="Atlas learns from your interactions, continuously improving its responses and actions to better serve your needs."
             index={0}
