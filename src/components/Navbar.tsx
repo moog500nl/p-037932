@@ -106,7 +106,6 @@ const Navbar = () => {
               <Link to="/#details" className="nav-link">Contact</Link>
             </>
           )}
-          <Link to="/blog" className="nav-link">Blog</Link>
         </nav>
 
         {/* Mobile menu button - increased touch target */}
@@ -186,13 +185,6 @@ const Navbar = () => {
               </Link>
             </>
           )}
-          <Link 
-            to="/blog" 
-            className="text-xl font-medium py-3 px-6 w-full text-center rounded-lg hover:bg-gray-100" 
-            onClick={closeMenu}
-          >
-            Blog
-          </Link>
         </nav>
       </div>
     </header>
