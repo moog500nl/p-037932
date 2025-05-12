@@ -135,7 +135,13 @@ const Navbar = () => {
           <Link 
             to="/"
             className="text-xl font-medium py-3 px-6 w-full text-center rounded-lg hover:bg-gray-100" 
-            onClick={closeMenu}
+            onClick={(e) => {
+              closeMenu();
+              if (location.pathname === '/') {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              }
+            }}
           >
             Home
           </Link>
