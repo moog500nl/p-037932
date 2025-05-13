@@ -90,14 +90,13 @@ const Hero = () => {
       className="overflow-hidden relative bg-cover" 
       id="hero" 
       style={{
-        backgroundImage: 'url("/attached_assets/AI_overview.png")',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center', 
+        backgroundImage: 'url("/Header-background.webp")',
+        backgroundPosition: 'center 30%', 
         padding: isMobile ? '100px 12px 40px' : '120px 20px 60px'
       }}
       aria-label="hero section"
     >
-      <link rel="preload" as="image" href="/attached_assets/AI_overview.png" />
+      <link rel="preload" as="image" href="/Header-background.webp" />
       <div className="absolute -top-[10%] -right-[5%] w-1/2 h-[70%] bg-pulse-gradient opacity-20 blur-3xl rounded-full"></div>
 
       <div className="container px-4 sm:px-6 lg:px-8" ref={containerRef}>
