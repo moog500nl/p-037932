@@ -135,7 +135,7 @@ const HumanoidSection = () => {
               <div className="relative z-10 p-5 sm:p-6 md:p-8 h-full flex items-center">
                 <div className="max-w-lg">
                   <h3 className="text-2xl sm:text-3xl md:text-4xl font-display text-white font-bold leading-tight mb-4">
-                    How consumers research brands online is changing
+                    How consumers research products & services online is changing
                   </h3>
                 </div>
               </div>
@@ -207,7 +207,7 @@ const HumanoidSection = () => {
               <div className="relative z-10 p-5 sm:p-6 md:p-8 h-full flex items-center">
                 <div className="max-w-lg">
                   <h3 className="text-2xl sm:text-3xl md:text-4xl font-display text-white font-bold leading-tight mb-4">
-                    Are AI agents recommending your brand or competitors, and what's driving their recommendations?
+                    Is AI recommending your brand or competitors, and what's driving their recommendations?
                   </h3>
                 </div>
               </div>
