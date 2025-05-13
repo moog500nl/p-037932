@@ -1,6 +1,7 @@
 
 import React, { useEffect, useState } from "react";
 import Lottie from "lottie-react";
+import { Skeleton } from "./ui/skeleton";
 
 interface LottieAnimationProps {
   animationPath: string;
@@ -16,13 +17,33 @@ const LottieAnimation = ({
   autoplay = true,
 }: LottieAnimationProps) => {
   const [animData, setAnimData] = useState<any>(null);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
+    let isMounted = true;
+    setIsLoading(true);
+
     fetch(animationPath)
       .then(response => response.json())
-      .then(data => setAnimData(data))
-      .catch(error => console.error("Error loading Lottie animation:", error));
+      .then(data => {
+        if (isMounted) {
+          setAnimData(data);
+          setIsLoading(false);
+        }
+      })
+      .catch(error => {
+        console.error("Error loading Lottie animation:", error);
+        setIsLoading(false);
+      });
+
+    return () => {
+      isMounted = false;
+    };
   }, [animationPath]);
+
+  if (isLoading) {
+    return <Skeleton className={`${className} w-full h-full`} />;
+  }
 
   if (!animData) return null;
 
