@@ -31,7 +31,7 @@ const ImageShowcaseSection = () => {
             <p className="text-gray-700 text-sm sm:text-base">
               Harnessing data from major LLMs such as Gemini, ChatGPT, Grok, and Perplexity, 
               we provide comprehensive metrics and actionable recommendations to enhance your 
-              brand's visibility and win rate in the AI-driven landscape.
+              company's visibility and win rate in the AI-driven landscape.
             </p>
           </div>
         </div>
