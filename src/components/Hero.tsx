@@ -113,7 +113,7 @@ const Hero = () => {
           </div>
 
           <div className="w-full lg:w-1/2 relative mt-6 lg:mt-0">
-            <div className="relative z-10 animate-fade-in" style={{ animationDelay: "0.9s" }}>
+            <div className="relative z-10">
               <div className="relative transition-all duration-500 ease-out overflow-hidden rounded-2xl sm:rounded-3xl shadow-2xl">
                 <img 
                   ref={imageRef} 
